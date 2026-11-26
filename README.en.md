@@ -2,9 +2,9 @@
 
 <div align="center">
 
-# Azur Promilia Frame Generation Toolbox
+# Azur Promilia Graphics Toolbox
 
-**Enable DLSS5 image enhancement and frame generation for Azur Promilia with one click. Install with one click and launch the game with another.**
+**Enable DLSS5 image enhancement, frame generation, and blur removal for Azur Promilia with one click. Install without tedious manual file replacement.**
 
 Azur Promilia edition · DLSS5 · Intel XeSS · OptiScaler · 简体中文 / English
 
@@ -30,13 +30,11 @@ Gameplay typically stays around **80–100 FPS**. At the moment shown below, the
 
 <p align="center"><img src="docs/images/fps-overlay.png" width="420" alt="Frame rate overlay showing 114 FPS after frame generation and 57 FPS before"></p>
 
-![Gameplay at 4K with maximum settings and DLSS5 enabled](docs/images/fps-4k.jpg)
-
 The built-in frame rate overlay appears in the upper-left corner. It shows frame rates before and after frame generation, a frame-time graph, and added latency. You can toggle it at any time.
 
 ## How to Use
 
-1. **Download and extract** the archive, then double-click **AzurFrameToolbox.exe**. No installation or setup knowledge is required.
+1. **Download and extract** the archive, then double-click **AzurFrameToolbox.exe**.
 2. **Locate the game.** The toolbox automatically searches for Azur Promilia and its official launcher. If it cannot find them, click “Browse…” and select AzurPromilia.exe.
 3. **Click “Install Frame Generation Components.”** Installation takes about one or two minutes, and original files are backed up automatically.
 4. **Click “Launch Game.”** The toolbox opens the official launcher. Start the game there as usual.
@@ -72,7 +70,7 @@ Open “Restore and Uninstall” and select “Restore to Pre-Install State.”
 ## System Requirements
 
 - 64-bit Windows 10 or 11
-- An NVIDIA RTX GPU is recommended. Testing has focused mainly on RTX 40 and 50 series. DLSS frame generation from 2x to 6x requires an RTX 40 or 50 series GPU.
+- An NVIDIA RTX GPU is recommended. Testing has focused mainly on RTX 40 and 50 series.
 
 ## Notice
 
@@ -82,6 +80,6 @@ This is a third-party tool made by players and is not affiliated with the game�
 
 - DLSS5 NR, a RenoDX plugin, by Lecram
 - [ReShade](https://reshade.me)
-- [OptiScaler](https://github.com/optiscaler/OptiScaler), licensed under GPL-3.0. The full source diff for the modified build included with the toolbox is in the distribution’s resources/licenses/optiscaler directory.
+- [OptiScaler](https://github.com/optiscaler/OptiScaler), licensed under GPL-3.0.
 - Intel XeSS
 - Made by MODULUS (模序)

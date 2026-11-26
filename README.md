@@ -2,9 +2,9 @@
 
 <div align="center">
 
-# 蓝色星原插帧工具箱
+# 蓝色星原画质工具箱
 
-**给《蓝色星原》一键开启 DLSS5 画质增强与插帧。点一下安装，点一下开始游戏。**
+**给《蓝色星原》一键开启 DLSS5 画质增强，插帧和反虚化。一键安装，无需繁琐手动替换文件。**
 
 `蓝色星原特供` · DLSS5 · Intel XeSS · OptiScaler · 中文 / English
 
@@ -30,13 +30,12 @@
 
 <p align="center"><img src="docs/images/fps-overlay.png" width="420" alt="帧率浮窗：插帧后 114 FPS，插帧前 57 FPS"></p>
 
-![4K 全最高、DLSS5 开启时的游戏画面](docs/images/fps-4k.jpg)
 
 左上角的帧率浮窗是工具箱自带的。它显示插帧前后的帧数、帧时间曲线和增加的延迟，可以随时开关。
 
 ## 怎么用
 
-1. **下载并解压**，双击 `AzurFrameToolbox.exe`。不用安装，也不用懂任何设置。
+1. **下载并解压**，双击 `AzurFrameToolbox.exe`。
 2. **找到游戏**：工具箱会自动查找蓝色星原和官方启动器；没找到就点「手动选择…」，选中 `AzurPromilia.exe`。
 3. **点「安装插帧组件」**：大约一两分钟，原文件会自动备份。
 4. **点「开始游戏」**：工具箱会打开官方启动器，在启动器里正常进入游戏即可。
@@ -72,7 +71,7 @@ DLSS5 的插帧依赖 NR。在 DLSS5 面板里重新打开 NR 即可；也可以
 ## 系统要求
 
 - Windows 10 / 11，64 位
-- 推荐 NVIDIA RTX 显卡（主要在 RTX 40/50 系列上测试）；DLSS 帧生成 2x–6x 需要 RTX 40/50 系列
+- 推荐 NVIDIA RTX 显卡（主要在 RTX 40/50 系列上测试）；
 
 ## 注意
 
@@ -82,6 +81,6 @@ DLSS5 的插帧依赖 NR。在 DLSS5 面板里重新打开 NR 即可；也可以
 
 - DLSS5 NR（RenoDX 插件）：作者 Lecram
 - [ReShade](https://reshade.me)
-- [OptiScaler](https://github.com/optiscaler/OptiScaler)：GPL-3.0，本工具附带的修改版完整源码差异见 `resources/licenses/optiscaler`
+- [OptiScaler](https://github.com/optiscaler/OptiScaler)：GPL-3.0
 - Intel XeSS
 - 由 MODULUS（模序）制作
