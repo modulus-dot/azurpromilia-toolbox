@@ -14,13 +14,15 @@ Azur Promilia edition · DLSS5 · Intel XeSS · OptiScaler · 简体中文 / Eng
 
 ## Visual Comparisons
 
-The left side shows the original game, and the right side shows DLSS5 enabled. The game UI cannot be hidden, so it appears in the screenshots.
+The left side shows the original game, and the right side shows DLSS5 enabled. Click an image to view it at full resolution.
 
-![Meadow and stone platform, original vs DLSS5](docs/images/compare-meadow.jpg)
+![Mid-distance scene, original vs DLSS5](docs/images/compare-fixed-mid.jpg)
 
-![Village path, original vs DLSS5](docs/images/compare-village.jpg)
+![Close-up scene, original vs DLSS5](docs/images/compare-fixed-near.jpg)
 
-![Lake and golden tree, original vs DLSS5](docs/images/compare-lake.jpg)
+## Main Interface
+
+<p align="center"><img src="docs/images/toolbox-main.png" width="100%" alt="Azur Promilia Graphics Toolbox main interface"></p>
 
 ## Frame Rate Test
 
@@ -33,6 +35,8 @@ Gameplay typically stays around **80–100 FPS**. At the moment shown below, the
 The built-in frame rate overlay appears in the upper-left corner. It shows frame rates before and after frame generation, a frame-time graph, and added latency. You can toggle it at any time.
 
 ## How to Use
+
+To clone this repository with Git, install Git LFS first, then run `git lfs pull` after cloning to download the complete application and resource package.
 
 1. **Download and extract** the archive, then double-click **AzurFrameToolbox.exe**.
 2. **Locate the game.** The toolbox automatically searches for Azur Promilia and its official launcher. If it cannot find them, click “Browse…” and select AzurPromilia.exe.

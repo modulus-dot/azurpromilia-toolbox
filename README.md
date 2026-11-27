@@ -14,13 +14,15 @@
 
 ## 效果对比
 
-左边是原版，右边开启了 DLSS5。游戏无法隐藏界面，所以截图里带有 UI。
+左边是原版，右边开启了 DLSS5。点击图片可查看高清大图。
 
-![草地与石台：原版 vs DLSS5](docs/images/compare-meadow.jpg)
+![中景场景：原版 vs DLSS5](docs/images/compare-fixed-mid.jpg)
 
-![村口小路：原版 vs DLSS5](docs/images/compare-village.jpg)
+![近景场景：原版 vs DLSS5](docs/images/compare-fixed-near.jpg)
 
-![湖边与金色大树：原版 vs DLSS5](docs/images/compare-lake.jpg)
+## 软件主界面
+
+<p align="center"><img src="docs/images/toolbox-main.png" width="100%" alt="蓝色星原画面工具箱主界面"></p>
 
 ## 帧率实测
 
@@ -34,6 +36,8 @@
 左上角的帧率浮窗是工具箱自带的。它显示插帧前后的帧数、帧时间曲线和增加的延迟，可以随时开关。
 
 ## 怎么用
+
+通过 Git 克隆本仓库时，请先安装 Git LFS，克隆后运行 `git lfs pull` 下载完整程序和资源包。
 
 1. **下载并解压**，双击 `AzurFrameToolbox.exe`。
 2. **找到游戏**：工具箱会自动查找蓝色星原和官方启动器；没找到就点「手动选择…」，选中 `AzurPromilia.exe`。
