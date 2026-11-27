@@ -18,9 +18,9 @@ The left side shows the original game, and the right side shows DLSS5 enabled. C
 
 [Open the interactive comparison page](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/). Drag the divider right to reveal the original image, or left to reveal the DLSS5 image.
 
-![Mid-distance scene, original vs DLSS5](docs/images/compare-fixed-mid.jpg)
+[![Mid-distance scene, original vs DLSS5](docs/images/compare-fixed-mid-split.jpg)](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/#mid-distance)
 
-![Close-up scene, original vs DLSS5](docs/images/compare-fixed-near.jpg)
+[![Close-up scene, original vs DLSS5](docs/images/compare-fixed-near-split.jpg)](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/#close-up)
 
 ## Main Interface
 

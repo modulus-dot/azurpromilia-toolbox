@@ -14,11 +14,11 @@
 
 ## 效果对比
 
-左边是原版，右边开启了 DLSS5。点击图片可查看高清大图。
+左边是原版，右边开启了 DLSS5。点击图片可进入高清拖动对比页，向右拖露出原版，向左拖露出 DLSS5。
 
-![中景场景：原版 vs DLSS5](docs/images/compare-fixed-mid.jpg)
+[![中景原版与 DLSS5 效果对比](docs/images/compare-fixed-mid-split.jpg)](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/#mid-distance)
 
-![近景场景：原版 vs DLSS5](docs/images/compare-fixed-near.jpg)
+[![近景原版与 DLSS5 效果对比](docs/images/compare-fixed-near-split.jpg)](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/#close-up)
 
 ## 软件主界面
 

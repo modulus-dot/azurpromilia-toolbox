@@ -114,12 +114,12 @@
         opacity: 0;
       }
 
-      .comparison__range:focus-visible ~ .comparison__handle {
+      .comparison:focus-within .comparison__handle {
         outline: 3px solid #f4c96c;
         outline-offset: 5px;
       }
 
-      .hint { margin: 10px 0 0; font-size: .95rem; }
+      .image-error { color: #ffbdac; }
       .footer { margin-top: 44px; font-size: .9rem; }
       a { color: #f4c96c; }
     </style>
@@ -129,30 +129,33 @@
       <h1>Azur Promilia DLSS5 comparison</h1>
       <p class="intro">Drag the vertical divider. Drag right to reveal more of the original image. Drag left to reveal more of the DLSS5 image. You can also use the arrow keys after focusing the divider.</p>
 
-      <h2>Mid-distance scene</h2>
+      <noscript><p>Enable JavaScript to drag the comparison dividers.</p></noscript>
+
+      <h2 id="mid-distance">Mid-distance scene</h2>
       <div class="comparison" data-comparison>
-        <img class="comparison__image" src="../images/comparison/mid-on-4k.png" alt="Mid-distance scene with DLSS5 enabled">
-        <img class="comparison__image comparison__image--original" src="../images/comparison/mid-off-4k.png" alt="Mid-distance scene in the original game">
+        <img class="comparison__image" src="../images/comparison/mid-on-4k.png" width="3307" height="1860" alt="Mid-distance scene with DLSS5 enabled">
+        <img class="comparison__image comparison__image--original" src="../images/comparison/mid-off-4k.png" width="3307" height="1860" alt="Mid-distance scene in the original game">
         <span class="comparison__label comparison__label--original">Original</span>
         <span class="comparison__label comparison__label--dlss5">DLSS5</span>
         <span class="comparison__line" aria-hidden="true"></span>
         <span class="comparison__handle" aria-hidden="true">↔</span>
         <input class="comparison__range" type="range" min="0" max="100" value="50" aria-label="Mid-distance scene comparison divider" aria-valuetext="50 percent original">
       </div>
-      <p class="hint">The divider starts in the middle.</p>
+      <p class="image-error" role="status" hidden>Unable to load this image pair. Reload the page to try again.</p>
 
-      <h2>Close-up scene</h2>
+      <h2 id="close-up">Close-up scene</h2>
       <div class="comparison" data-comparison>
-        <img class="comparison__image" src="../images/comparison/near-on-4k.png" alt="Close-up scene with DLSS5 enabled">
-        <img class="comparison__image comparison__image--original" src="../images/comparison/near-off-4k.png" alt="Close-up scene in the original game">
+        <img class="comparison__image" src="../images/comparison/near-on-4k.png" width="3307" height="1860" loading="lazy" alt="Close-up scene with DLSS5 enabled">
+        <img class="comparison__image comparison__image--original" src="../images/comparison/near-off-4k.png" width="3307" height="1860" loading="lazy" alt="Close-up scene in the original game">
         <span class="comparison__label comparison__label--original">Original</span>
         <span class="comparison__label comparison__label--dlss5">DLSS5</span>
         <span class="comparison__line" aria-hidden="true"></span>
         <span class="comparison__handle" aria-hidden="true">↔</span>
         <input class="comparison__range" type="range" min="0" max="100" value="50" aria-label="Close-up scene comparison divider" aria-valuetext="50 percent original">
       </div>
+      <p class="image-error" role="status" hidden>Unable to load this image pair. Reload the page to try again.</p>
 
-      <p class="footer"><a href="../../README.md">Back to the README</a></p>
+      <p class="footer"><a href="https://github.com/modulus-dot/azurpromilia-toolbox#readme">Back to the README</a></p>
     </main>
     <script>
       document.querySelectorAll('[data-comparison]').forEach((comparison) => {
@@ -163,12 +166,13 @@
           range.setAttribute('aria-valuetext', `${value} percent original`);
         };
         range.addEventListener('input', update);
-        comparison.addEventListener('pointerdown', (event) => {
-          if (event.target === range) return;
-          const bounds = comparison.getBoundingClientRect();
-          range.value = String(Math.round(((event.clientX - bounds.left) / bounds.width) * 100));
-          update();
-          range.focus();
+        comparison.querySelectorAll('img').forEach((image) => {
+          const showError = () => {
+            range.disabled = true;
+            comparison.nextElementSibling.hidden = false;
+          };
+          image.addEventListener('error', showError);
+          if (image.complete && image.naturalWidth === 0) showError();
         });
         update();
       });
