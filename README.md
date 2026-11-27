@@ -1,90 +1,91 @@
-[**简体中文**](README.md) | [English](README.en.md)
+**English** | [简体中文](README.zh-CN.md)
 
 <div align="center">
 
-# 蓝色星原画质工具箱
+# Azur Promilia Graphics Toolbox
 
-**给《蓝色星原》一键开启 DLSS5 画质增强，插帧和反虚化。一键安装，无需繁琐手动替换文件。**
+**Enable DLSS5 image enhancement, frame generation, and blur removal for Azur Promilia with one click. Install without tedious manual file replacement.**
 
-`蓝色星原特供` · DLSS5 · Intel XeSS · OptiScaler · 中文 / English
+Azur Promilia edition · DLSS5 · Intel XeSS · OptiScaler · 简体中文 / English
 
 </div>
 
 ---
 
-## 效果对比
+## Visual Comparisons
 
-左边是原版，右边开启了 DLSS5。点击图片可查看高清大图。
+The left side shows the original game, and the right side shows DLSS5 enabled. Click an image to view it at full resolution.
 
-![中景场景：原版 vs DLSS5](docs/images/compare-fixed-mid.jpg)
+[Open the interactive comparison page](https://modulus-dot.github.io/azurpromilia-toolbox/comparison/). Drag the divider right to reveal the original image, or left to reveal the DLSS5 image.
 
-![近景场景：原版 vs DLSS5](docs/images/compare-fixed-near.jpg)
+![Mid-distance scene, original vs DLSS5](docs/images/compare-fixed-mid.jpg)
 
-## 软件主界面
+![Close-up scene, original vs DLSS5](docs/images/compare-fixed-near.jpg)
 
-<p align="center"><img src="docs/images/toolbox-main.png" width="100%" alt="蓝色星原画面工具箱主界面"></p>
+## Main Interface
 
-## 帧率实测
+<p align="center"><img src="docs/images/toolbox-main.png" width="100%" alt="Azur Promilia Graphics Toolbox main interface"></p>
 
-测试设备：**NVIDIA GeForce RTX 5080**，**4K 分辨率，画质全部最高**，开启 DLSS5 + Intel XeSS 插帧（2x）。
+## Frame Rate Test
 
-日常跑图稳定在 **80–100 帧左右**。下图这一刻：渲染 57 帧，插帧后输出 **114 帧**。
+Test system: **NVIDIA GeForce RTX 5080**, **4K resolution with all settings at maximum**, DLSS5 and Intel XeSS frame generation enabled at 2x.
 
-<p align="center"><img src="docs/images/fps-overlay.png" width="420" alt="帧率浮窗：插帧后 114 FPS，插帧前 57 FPS"></p>
+Gameplay typically stays around **80–100 FPS**. At the moment shown below, the game rendered 57 FPS and output **114 FPS** after frame generation.
 
+<p align="center"><img src="docs/images/fps-overlay.png" width="420" alt="Frame rate overlay showing 114 FPS after frame generation and 57 FPS before"></p>
 
-左上角的帧率浮窗是工具箱自带的。它显示插帧前后的帧数、帧时间曲线和增加的延迟，可以随时开关。
+The built-in frame rate overlay appears in the upper-left corner. It shows frame rates before and after frame generation, a frame-time graph, and added latency. You can toggle it at any time.
 
-## 怎么用
+## How to Use
 
-通过 Git 克隆本仓库时，请先安装 Git LFS，克隆后运行 `git lfs pull` 下载完整程序和资源包。
+To clone this repository with Git, install Git LFS first, then run `git lfs pull` after cloning to download the complete application and resource package.
 
-1. **下载并解压**，双击 `AzurFrameToolbox.exe`。
-2. **找到游戏**：工具箱会自动查找蓝色星原和官方启动器；没找到就点「手动选择…」，选中 `AzurPromilia.exe`。
-3. **点「安装插帧组件」**：大约一两分钟，原文件会自动备份。
-4. **点「开始游戏」**：工具箱会打开官方启动器，在启动器里正常进入游戏即可。
-5. **游戏内**：按 `Home` 打开 DLSS5 面板，按 `Ctrl+F10` 开关帧率浮窗。
+1. **Download and extract** the archive, then double-click **AzurFrameToolbox.exe**.
+2. **Locate the game.** The toolbox automatically searches for Azur Promilia and its official launcher. If it cannot find them, click “Browse…” and select AzurPromilia.exe.
+3. **Click “Install Frame Generation Components.”** Installation takes about one or two minutes, and original files are backed up automatically.
+4. **Click “Launch Game.”** The toolbox opens the official launcher. Start the game there as usual.
+5. **In game,** press **Home** to open the DLSS5 panel and **Ctrl+F10** to toggle the frame rate overlay.
 
-不想用了，到「恢复与卸载」点 **恢复到安装前**，游戏目录会按安装记录逐个还原，不留残留。
+To remove the changes, open “Restore and Uninstall” and select **Restore to Pre-Install State**. The game directory is restored file by file using the installation record.
 
-## 功能
+## Features
 
-- **两种插帧方案，随时切换**
-  - **DLSS5**：画质增强 + Intel XeSS 插帧（2x）；N 卡装好 DLSS 帧生成运行库后，可选 2x–6x。
-  - **OptiScaler（蓝色星原特供版）**：XeFG 插帧 2x–6x，不依赖 DLSS5 的画质增强；游戏内面板中文化，改动自动保存。
-- **帧率浮窗**：三种样式、四个角、多档大小，可记录帧率 CSV。
-- **快捷键自定义**：直接按下想要的组合键即可。
-- **诊断与反馈**：自动读取游戏日志，告诉你插帧有没有在跑、为什么没跑；一键导出反馈包。
-- **反虚化（可选）**：替换游戏的虚化资源，可随时撤回。
-- **安全可还原**：所有改动先备份再写入，中途失败会自动回滚；更新只会在浏览器里打开下载页，不会自动下载或运行任何东西。
+- **Two frame generation options you can switch between**
+  - **DLSS5:** image enhancement plus Intel XeSS frame generation at 2x. With the DLSS frame generation runtime installed on an NVIDIA GPU, 2x–6x is available.
+  - **OptiScaler, Azur Promilia edition:** XeFG frame generation from 2x to 6x, independent of DLSS5 image enhancement. The in-game panel is translated into Chinese, and changes are saved automatically.
+- **Frame rate overlay:** three styles, four corner positions, multiple sizes, and optional frame rate CSV recording.
+- **Custom hotkeys:** press the key combination you want to use.
+- **Diagnostics and feedback:** reads game logs to report whether frame generation is running and why it may not be, with one-click feedback package export.
+- **Optional blur removal:** replaces the game’s blur resources and can be reverted at any time.
+- **Safe restoration:** files are backed up before changes are written, and failures roll back automatically. Updates open the download page in a browser and never download or run files automatically.
 
-## 常见问题
+## FAQ
 
-**按 Home 面板没出来？**
-到「快捷键」打开「面板兼容模式」，或者换一个不冲突的按键。
+**The panel does not appear when I press Home.**
+Open “Panel Compatibility Mode” under “Hotkeys,” or choose a key that does not conflict with another binding.
 
-**游戏里关掉了画质增强（NR），插帧就没了？**
-DLSS5 的插帧依赖 NR。在 DLSS5 面板里重新打开 NR 即可；也可以在工具箱里打开「插帧」，它会同时打开 NR，重启游戏后生效。想要不受这个限制，可以把插帧来源切到 OptiScaler。
+**Frame generation stops when image enhancement (NR) is disabled in game.**
+DLSS5 frame generation depends on NR. Re-enable NR in the DLSS5 panel. You can also enable “Frame Generation” in the toolbox, which enables NR at the same time and takes effect after restarting the game. To avoid this dependency, switch the frame generation source to OptiScaler.
 
-**开了插帧但没有效果？**
-在 NVIDIA App 里关掉本游戏的 Smooth Motion（驱动插帧），它会和 DLSS5 冲突。「诊断与日志」页会直接提示这类问题。
+**Frame generation is enabled but does not seem to work.**
+Disable Smooth Motion for this game in the NVIDIA App because driver frame generation conflicts with DLSS5. The “Diagnostics and Logs” page also reports this issue.
 
-**想回到原版？**
-「恢复与卸载」→「恢复到安装前」。
+**How do I restore the original game?**
+Open “Restore and Uninstall” and select “Restore to Pre-Install State.”
 
-## 系统要求
+## System Requirements
 
-- Windows 10 / 11，64 位
-- 推荐 NVIDIA RTX 显卡（主要在 RTX 40/50 系列上测试）；
+- 64-bit Windows 10 or 11
+- An NVIDIA RTX GPU is recommended. Testing has focused mainly on RTX 40 and 50 series.
 
-## 注意
+## Notice
 
-本工具是玩家自制的第三方工具，与游戏官方无关。使用第三方插件可能违反游戏规则，也可能导致崩溃或账号风险，请自行判断。
+This is a third-party tool made by players and is not affiliated with the game’s official publisher. Third-party plugins may violate the game rules, cause crashes, or put your account at risk. Use them at your own discretion.
 
-## 致谢与许可
+## Credits and License
 
-- DLSS5 NR（RenoDX 插件）：作者 Lecram
+- DLSS5 NR, a RenoDX plugin, by Lecram
 - [ReShade](https://reshade.me)
-- [OptiScaler](https://github.com/optiscaler/OptiScaler)：GPL-3.0
+- [OptiScaler](https://github.com/optiscaler/OptiScaler), licensed under GPL-3.0.
 - Intel XeSS
-- 由 MODULUS（模序）制作
+- Made by MODULUS (模序)
